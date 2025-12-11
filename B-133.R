@@ -17,3 +17,13 @@ p_corr <- ggplot(ds, aes(x = drunkdrive_rate,
     y = "Total crime rate (per 100,000 population)"
   ) +
   theme_minimal()
+
+print(p_corr)
+p_hist <- ggplot(ds, aes(x = crime_rate_total)) +
+  geom_histogram(bins = 10, boundary = 0) +
+  labs(
+    title = "Distribution of Total Crime Rate",
+    x = "Total crime rate (per 100,000 population)",
+    y = "Frequency (number of years)"
+  ) +
+  theme_minimal()
